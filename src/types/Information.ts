@@ -6,7 +6,7 @@ export interface CardInformation {
     cvv: string,
     firstName: string,
     lastName: string,
-    cardType: 'VISA' | 'MASTERCARD',
+    cardType: 'VISA' | 'MASTERCARD' | string,
 }
 
 /**

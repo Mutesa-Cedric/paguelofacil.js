@@ -3,8 +3,11 @@ import PagueloFacil from '../index'
 describe('Test for the package', () => {
     let codOper = '';
     const amount = 1
+    const cclw = process.env.CCLW!
+    const token = process.env.TOKEN!
+
     test('Will request AUTH transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw, token, 'development')
         const paymentInfo = {
             amount: amount,
             taxAmount: 0.0,
@@ -30,7 +33,7 @@ describe('Test for the package', () => {
     })
 
     test('Will attemp to REVERSE_AUTH transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw, token, 'development')
         const response = await pagueloFacil.ReverseAuthorization({
             amount: amount,
             description: 'testing REVERSE',
@@ -41,7 +44,7 @@ describe('Test for the package', () => {
     })
 
     test('Will request AUTH transaction for CAPTURE transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw, token, 'development')
         const response = await pagueloFacil.Authorization({
             amount: amount + 1,
             taxAmount: 0.0,
@@ -63,7 +66,7 @@ describe('Test for the package', () => {
     })
 
     test('Will request CAPTURE transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw,token, 'development')
         const response = await pagueloFacil.Capture({
             amount: amount + 1,
             taxAmount: 0.0,
@@ -78,7 +81,7 @@ describe('Test for the package', () => {
     })
 
     test('Will attemp to REVERSE_CAPTURE transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw,token, 'development')
         const response = await pagueloFacil.ReverseCapture({
             amount: amount + 1,
             description: 'testing REVERSE',
@@ -89,7 +92,7 @@ describe('Test for the package', () => {
     })
 
     test('Will attemp to AUTH_CAPTURE transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw,token, 'development')
         const response = await pagueloFacil.AuthCapture({
             amount: amount + 2,
             taxAmount: 0.0,
@@ -111,7 +114,7 @@ describe('Test for the package', () => {
     })
 
     test('Will attemp to RECURRENT transaction', async () => {
-        const pagueloFacil = new PagueloFacil(process.env.CCLW, process.env.TOKEN, 'development')
+        const pagueloFacil = new PagueloFacil(cclw,token, 'development')
         const response = await pagueloFacil.Recurrent({
             amount: amount + 3,
             taxAmount: 0.0,
