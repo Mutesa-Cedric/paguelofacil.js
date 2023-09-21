@@ -207,3 +207,5 @@ export default class PagueloFacil {
         });
     }
 }
+
+export const PagueloFacilType = PagueloFacil;
