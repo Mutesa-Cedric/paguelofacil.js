@@ -1,6 +1,6 @@
 {
   "name": "paguelofacil.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Unofficial package to connect Paguelo Facil rest api transactions.",
   "main": "dist/index.js",
   "types": "src/index.ts",
