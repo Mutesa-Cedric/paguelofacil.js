@@ -52,7 +52,8 @@ npm i paguelofacil.js
 
 ```javascript
 import  PagueloFacil  from  'pageulofacil.js';
-const  pagueloFacil  =  new  PagueloFacil(cclw, token, 'development');
+const  pagueloFacil  =  new  PagueloFacil(cclw, token, 'development'); //change to 'produciton' for production environment
+
 ```
 
   

@@ -1,7 +1,7 @@
 {
   "name": "paguelofacil.js",
-  "version": "0.0.1",
-  "description": "Unofficial package to connect Paguelo Facil rest api transactions.",
+  "version": "0.0.2",
+  "description": "paguelofacil Javascript/typescript SDK. easily integrate paguelofacil payment gateway in your js/ts applications",
   "main": "dist/index.js",
   "types": "src/index.ts",
   "jest": {
